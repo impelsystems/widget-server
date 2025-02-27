@@ -1,0 +1,20 @@
+{
+  "name": "widget-server",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Widgets NodeJS GraphQL Server",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "concurrently 'npm run compile-watch' 'nodemon --exec tsx src/main.ts'",
+    "compile-watch": "nodemon --exec 'tsc --noEmit'"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "graphql": "^16.10.0"
+  }
+}
